@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reset-db": "dropdb rBlog-db; createdb rBlog-db; psql -f schema.sql rBlog-db; psql -f seed.sql rBlog-db",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "debug": "node --inspect-brk index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "node": "^11.1.0",
+    "pg-promise": "^8.5.2"
+  }
+}
